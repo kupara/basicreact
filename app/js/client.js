@@ -1,13 +1,29 @@
 import React from 'react';
-import ReactDom from 'react-dom';
-import Header from './Header.jsx';
+import ReactDOM from 'react-dom';
+import Layout from './components/Layout.js';
+import Header from './components/Header.js';
+import Card from './components/Card.js';
 
-class Layout extends React.Component {
+class Home extends React.Component {
+  constructor() {
+  	super();
+  	this.state = {
+  		title: 'React'
+  	};
+  }
+
+  changeTitle(title) {
+  	this.setState({title});
+  }
+
   render() {
     return (
-    	<div>
-        <Header />
-        <h1>This is my very first React Application!</h1>
+      <div>
+    	 <Header title={this.state.title} changeTitle={this.changeTitle.bind(this)}/>
+       <Layout title={this.state.title} />
+       <Card/>
+       <Card/>
+       <Card/>
       </div>
     );
   }
@@ -15,4 +31,4 @@ class Layout extends React.Component {
 
 const app = document.getElementById('app');
 
-ReactDom.render(<Layout />, app);
+ReactDOM.render(<Home />, app);
