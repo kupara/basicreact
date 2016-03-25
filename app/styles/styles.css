@@ -9,9 +9,23 @@
 .margin-top {
 	margin-top: 20px;
 }
-
-ul li a {
-	color: #3359DE;
+.logo {
+  padding-top: 20px !important;
+}
+.row {
+  margin: 0 !important;
+}
+.card .card-content {
+  padding: 12px;
+}
+a {
+	color: #039be5;
+  font-size: 20px;
+}
+a:hover {
+  color: blue;
+  font-size: 20px;
+  text-decoration: underline;
 }
 
 .right-border {
@@ -50,3 +64,5 @@ ul li a {
 .text-center {
   text-align: center;
 }
+
+
